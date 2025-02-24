@@ -1,0 +1,35 @@
+.pageLoader
+{
+    width: 100vw;
+    height: 100vh;
+    position: fixed !important;
+    animation: pageLoader 3s;
+    background-size: cover;
+    opacity: 0;
+    z-index: 100;
+    display: none;
+}
+
+@keyframes pageLoader {
+    0%
+    {
+        display: block;
+        filter: contrast(0) saturate(0);
+        opacity: 1;
+    }
+    10%
+    {
+        filter: contrast(1) saturate(1);
+    }
+    90%
+    {
+        filter: contrast(1) saturate(1);
+        opacity: 1;
+    }
+    100%
+    {
+        filter: contrast(0) saturate(0) invert();
+        opacity: 0;
+        display: none;
+    }
+}

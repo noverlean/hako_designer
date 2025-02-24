@@ -1,0 +1,30 @@
+*, *::before, *::after
+{
+    margin: 0;
+}
+
+:root
+{
+    --main: #fff;
+    --main-sub: #f1f1f1; 
+    --medium: #686868; 
+    --main-alt: #272727; 
+
+    --accent: #6f00ff;
+}
+
+body
+{
+    width: 100vw;
+    height: 300vh;
+    overflow-x: hidden;
+    font-family: 'JejuGothic', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.colorMain
+{
+    background-color: var(--main);
+    transition: background-color 0.5s;
+}
