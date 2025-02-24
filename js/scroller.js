@@ -31,6 +31,9 @@ let floors = {
         const profilePanel = document.getElementById('profilePanel');
         const stats = document.getElementById('stats');
 
+        const navRight = document.getElementById('navBarRight');
+        const navLeft = document.getElementById('navBarLeft');
+
         switch (this.current)
         {
             case 0:
@@ -45,6 +48,9 @@ let floors = {
                 avatar.style.height = '184px';
 
                 profilePanel.style.top = '100vh';
+
+                navRight.style.left = '50vw';
+                navLeft.style.right = '50vw';
                 break; 
             case 1:
                 nickname.style.top = '-200px';
@@ -58,8 +64,9 @@ let floors = {
                 avatar.style.height = '80px';
         
                 profilePanel.style.top = '10vh';
-        
-                stats.style.height = '50vh';
+
+                navRight.style.left = '59.5vw';
+                navLeft.style.right = '59vw';
                 break;
             case 2:
             default:
@@ -77,7 +84,6 @@ let floors = {
             
                     profilePanel.style.top = '-1vh';
             
-                    stats.style.height = '0vh'; 
                     console.log(this.current, this.count);
     
                     showTikTok(this.current - 2);

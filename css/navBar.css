@@ -1,0 +1,30 @@
+.navBar
+{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    transition: all .5s ease-out;
+    color: var(--main-alt);
+}
+
+.navBarLeft
+{
+    right: 50vw;
+}
+
+.navBarRight
+{
+    left: 50vw;
+}
+
+.navBarItem
+{
+    text-align: center;
+    margin: 0px 15px;
+    text-decoration: overline 2px;
+    font-size: 20px;
+    cursor: pointer;
+}
