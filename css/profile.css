@@ -19,7 +19,6 @@
     width: 100vw;
     text-align: center;
     color: var(--main-alt);
-    transition: color .5s;
     transition: all .5s;
     font-size: 500px;
     letter-spacing: -75px;
@@ -54,14 +53,3 @@
     transition: all .5s linear;
 }
 
-.profilePanel
-{
-    position: fixed;
-    top: 100vh;
-    display: block;
-    width: 70vw;
-    margin: 15vh 15vw;
-    background-color: var(--main-sub);
-    border-radius: 25px;
-    transition: all .4s linear;
-}

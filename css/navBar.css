@@ -1,6 +1,6 @@
 .navBar
 {
-    margin-top: 32px;
+    margin-top: 28px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -24,7 +24,86 @@
 {
     text-align: center;
     margin: 0px 15px;
-    text-decoration: overline 2px;
-    font-size: 20px;
+    /* text-decoration: none; */
+    font-size: 25px;
     cursor: pointer;
+    transition: all .5s linear;
+}
+
+.navBarItem::after {
+    position: relative;
+    content: '';
+    display: block;
+    height: 3px;
+    background: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: 0.3s;
+}
+
+.navBarItem:hover:after {
+    width: 100%;
+}
+
+.modelStyleContainer
+{
+    position: fixed;
+    top: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 130px);
+    transition: all .4s ease-out;
+    z-index: 2;
+}
+
+.modelStyleColumn
+{
+    width: 13%;
+    height: 100%;
+    writing-mode: vertical-lr;
+    align-items: center;
+    text-align: center;
+    line-height: 13vw;
+    font-size: 150px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.styleName
+{
+    width: 100%;
+    height: 100%;
+}
+
+.strongStyle
+{
+    background-image: url('/reference/t-shirt.png'), linear-gradient(#00000000 10%, #00000099 70%);
+}
+
+.wildStyle
+{
+    background-image: url('/reference/t-shirt.png'), linear-gradient(#00000000 10%, #ff000099 70%);
+}
+
+.egoStyle
+{
+    background-image: url('/reference/t-shirt.png'), linear-gradient(#00000000 10%, #bdbdbd99 70%);
+}
+
+.etcStyle
+{
+    background-image: url('/reference/t-shirt.png'), linear-gradient(#00000000 10%, #ffff0099 70%);
+}
+
+.t-shirt
+{
+    background-position: 50% 80%;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    z-index: 3;
 }

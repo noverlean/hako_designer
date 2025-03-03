@@ -28,7 +28,7 @@ let floors = {
     {
         const nickname = document.getElementById('nickname');
         const avatar = document.getElementById('avatar');
-        const profilePanel = document.getElementById('profilePanel');
+        const modelStyleContainer = document.getElementById('modelStyleContainer');
         const stats = document.getElementById('stats');
 
         const navRight = document.getElementById('navBarRight');
@@ -47,7 +47,7 @@ let floors = {
                 avatar.style.width = '184px';
                 avatar.style.height = '184px';
 
-                profilePanel.style.top = '100vh';
+                modelStyleContainer.style.top = '100vh';
 
                 navRight.style.left = '50vw';
                 navLeft.style.right = '50vw';
@@ -63,7 +63,7 @@ let floors = {
                 avatar.style.width = '80px';
                 avatar.style.height = '80px';
         
-                profilePanel.style.top = '10vh';
+                modelStyleContainer.style.top = '130px';
 
                 navRight.style.left = '59.5vw';
                 navLeft.style.right = '59vw';
@@ -82,7 +82,7 @@ let floors = {
                     avatar.style.width = '80px';
                     avatar.style.height = '80px';
             
-                    profilePanel.style.top = '-1vh';
+                    modelStyleContainer.style.top = '-1vh';
             
                     console.log(this.current, this.count);
     
