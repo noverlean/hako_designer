@@ -28,21 +28,6 @@
     line-height: 60vh;
 }
 
-.avatar
-{
-    width: 184px;
-    height: 184px;
-    position: fixed;
-    top: calc(50% - 92px);
-    left: calc(50% - 92px);
-    background-color: var(--medium);
-    background-image: url('../reference/ea5ddb514a41d18fd6076e4b37f22639e8cb36bd_full.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 25px;
-    transition: all .5s;
-}
-
 .bottomFog
 {
     height: 40vh;

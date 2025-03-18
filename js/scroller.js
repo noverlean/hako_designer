@@ -27,7 +27,6 @@ let floors = {
     changePageForCurrentFloor()
     {
         const nickname = document.getElementById('nickname');
-        const avatar = document.getElementById('avatar');
         const modelStyleContainer = document.getElementById('modelStyleContainer');
         const stats = document.getElementById('stats');
 
@@ -42,11 +41,6 @@ let floors = {
                 nickname.style.fontSize = '500px';
                 nickname.style.letterSpacing = '-75px';
 
-                avatar.style.top = 'calc(50% - 92px)';
-                avatar.style.left = 'calc(50% - 92px)';
-                avatar.style.width = '184px';
-                avatar.style.height = '184px';
-
                 modelStyleContainer.style.top = '100vh';
 
                 navRight.style.left = '50vw';
@@ -57,11 +51,6 @@ let floors = {
                 nickname.style.width = '100vw';
                 nickname.style.fontSize = '100px';
                 nickname.style.letterSpacing = '-15px';
-        
-                avatar.style.top = '25px';
-                avatar.style.left = '25px';
-                avatar.style.width = '80px';
-                avatar.style.height = '80px';
         
                 modelStyleContainer.style.top = '130px';
 
@@ -76,11 +65,6 @@ let floors = {
                     nickname.style.width = '100vw';
                     nickname.style.fontSize = '100px';
                     nickname.style.letterSpacing = '-15px';
-            
-                    avatar.style.top = '25px';
-                    avatar.style.left = '25px';
-                    avatar.style.width = '80px';
-                    avatar.style.height = '80px';
             
                     modelStyleContainer.style.top = '-1vh';
             
