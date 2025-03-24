@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>-Hako</title>
-    <link rel="icon" href="reference/ea5ddb514a41d18fd6076e4b37f22639e8cb36bd_full.jpg" type="image/png">
+    <link rel="icon" href="reference/logo1.png" type="image/png">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/buttons.css">
@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body class="colorMain">
     <div id="themePicker" class="themePicker">
@@ -30,17 +31,38 @@
     </div>
     <div id="navBarRight" class="navBar navBarRight">
         
-        <div id="navBarItem3" class="navBarItem">HISTORY</div>
+        <div id="navBarItem3" class="navBarItem">CS2</div>
         <div id="navBarItem4" class="navBarItem">ABOUT</div>
     </div>
 
-    <main id="modelStyleContainer" class="modelStyleContainer">
-
+    <canvas id="canvas"></canvas>
+    <main id="contentContainer">
+        <h2>Counter-Strike 2</h2>
+        <div class="line"></div>
+        <div class="scrollContainer">
+            <div class="contentContainer">
+                <h3>Введение</h3>
+                <div class="line"></div>
+                <div class="image" style="background-image: url('reference/counter-strike-2-pc-game-steam-cover.jpg');"></div>
+                Counter-Strike 2 — это многопользовательский тактический шутер от первого лица, разработанный компанией Valve. Игра представляет собой обновление популярной Counter-Strike: Global Offensive и предлагает улучшенную графику, переработанные карты и новый движок Source 2.
+                <br><br>
+                В игре две команды — террористы и контртеррористы — соревнуются в выполнении различных задач, таких как установка или обезвреживание бомбы, а также спасение заложников. Counter-Strike 2 отличается динамичным геймплеем, реалистичными эффектами дыма и новой системой серверов, которая обеспечивает более точное и плавное взаимодействие игроков.
+            </div>
+            <div class="contentContainer">
+                <h3>Введение</h3>
+                <div class="line"></div>
+                <div class="image" style="background-image: url('reference/counter-strike-2-pc-game-steam-cover.jpg');"></div>
+                Counter-Strike 2 — это многопользовательский тактический шутер от первого лица, разработанный компанией Valve. Игра представляет собой обновление популярной Counter-Strike: Global Offensive и предлагает улучшенную графику, переработанные карты и новый движок Source 2.
+                <br><br>
+                В игре две команды — террористы и контртеррористы — соревнуются в выполнении различных задач, таких как установка или обезвреживание бомбы, а также спасение заложников. Counter-Strike 2 отличается динамичным геймплеем, реалистичными эффектами дыма и новой системой серверов, которая обеспечивает более точное и плавное взаимодействие игроков.
+            </div>
+        </div>
     </main>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- <script src="./js/navBar.js"></script> -->
+    <script src="./js/navBar.js"></script>
+    <script src="./js/perlinFX.js"></script>
     <script src="./js/scroller.js"></script>
     <script src="./js/theme/theme.js"></script>
 </body>

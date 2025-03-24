@@ -21,10 +21,76 @@ body
     font-family: 'JejuGothic', sans-serif;
     font-weight: 400;
     font-style: normal;
+    
 }
 
 .colorMain
 {
     background-color: var(--main);
     transition: background-color 0.5s;
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    z-index: -1;
+}
+
+h2
+{
+    text-align: start;
+    margin: 0px 15vw;
+    width: 70vw;
+    font-size: 30px;
+}
+
+h3
+{
+    text-align: start;
+    margin: 35px 0vw 0px 0vw;
+    font-size: 25px;
+}
+
+.image
+{
+    height: 400px;
+    background-size: cover;
+    margin: 15px 0px;
+    border-radius: 15px;
+}
+
+.line
+{
+    height: 3px;
+    width: 100%;
+    background-color: var(--main-alt);
+    margin: 1.5vh 0;
+}
+
+main
+{
+    position: fixed;
+    top: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100vw;
+    transition: all .4s ease-out;
+    z-index: 2;
+}
+
+.contentContainer
+{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.scrollContainer
+{
+    width: 60vw;
+    margin: 0 20vw;
+    overflow: scroll;
+    height: 80vh;
 }

@@ -28,6 +28,8 @@
     font-size: 25px;
     cursor: pointer;
     transition: all .5s linear;
+    padding: 5px 5px 0px 5px;
+    border-radius: 8px;
 }
 
 .navBarItem::after {
@@ -45,20 +47,6 @@
 
 .navBarItem:hover:after {
     width: 100%;
-}
-
-.modelStyleContainer
-{
-    position: fixed;
-    top: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: calc(100vh - 130px);
-    transition: all .4s ease-out;
-    z-index: 2;
 }
 
 .modelStyleColumn

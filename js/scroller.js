@@ -27,7 +27,7 @@ let floors = {
     changePageForCurrentFloor()
     {
         const nickname = document.getElementById('nickname');
-        const modelStyleContainer = document.getElementById('modelStyleContainer');
+        const contentContainer = document.getElementById('contentContainer');
         const stats = document.getElementById('stats');
 
         const navRight = document.getElementById('navBarRight');
@@ -41,7 +41,7 @@ let floors = {
                 nickname.style.fontSize = '500px';
                 nickname.style.letterSpacing = '-75px';
 
-                modelStyleContainer.style.top = '100vh';
+                contentContainer.style.top = '100vh';
 
                 navRight.style.left = '50vw';
                 navLeft.style.right = '50vw';
@@ -52,7 +52,7 @@ let floors = {
                 nickname.style.fontSize = '100px';
                 nickname.style.letterSpacing = '-15px';
         
-                modelStyleContainer.style.top = '130px';
+                contentContainer.style.top = '130px';
 
                 navRight.style.left = '59.5vw';
                 navLeft.style.right = '59vw';
@@ -66,7 +66,7 @@ let floors = {
                     nickname.style.fontSize = '100px';
                     nickname.style.letterSpacing = '-15px';
             
-                    modelStyleContainer.style.top = '-1vh';
+                    contentContainer.style.top = '-1vh';
             
                     console.log(this.current, this.count);
     
@@ -77,20 +77,32 @@ let floors = {
     }
 }
 
+let passiveState = false;
+const elements = document.querySelectorAll('.scrollContainer');
+elements.forEach(element => {
+  element.addEventListener('mouseenter', () => {
+    passiveState = true;
+  });
+  element.addEventListener('mouseleave', () => {
+    passiveState = false;
+  });
+});
+
+
 //добавляем обработчик событий для прокрута колеса мыши для разных версий бразуеров
 if (document.addEventListener) {
     if ('onwheel' in document) {
         // IE9+, FF17+, Ch31+
-        document.addEventListener("wheel", onWheel, { passive: false });
+        document.addEventListener("wheel", onWheel, { passive: true });
     } else if ('onmousewheel' in document) {
         // устаревший вариант события
-        document.addEventListener("mousewheel", onWheel, { passive: false });
+        document.addEventListener("mousewheel", onWheel, { passive: true });
     } else {
         // Firefox < 17
-        document.addEventListener("MozMousePixelScroll", onWheel, { passive: false });
+        document.addEventListener("MozMousePixelScroll", onWheel, { passive: true });
     }
 } else { // IE8-
-    document.attachEvent("onmousewheel", onWheel, { passive: false });
+    document.attachEvent("onmousewheel", onWheel, { passive: true });
 }
 
 //создаем локи
@@ -115,7 +127,7 @@ function onWheel(e) {
     //отменяем автоматическую браузерную прокрутку
     e.preventDefault();
 
-    if (!scrollLocked)
+    if (!scrollLocked && !passiveState)
     {
         if (delta < 50)
         {
