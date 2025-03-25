@@ -28,6 +28,7 @@ let floors = {
     {
         const nickname = document.getElementById('nickname');
         const contentContainer = document.getElementById('contentContainer');
+        const paragraphListPanelContainer = document.getElementById('paragraphListPanelContainer');
         const stats = document.getElementById('stats');
 
         const navRight = document.getElementById('navBarRight');
@@ -45,6 +46,8 @@ let floors = {
 
                 navRight.style.left = '50vw';
                 navLeft.style.right = '50vw';
+
+                paragraphListPanelContainer.style.left = '-25vw';
                 break; 
             case 1:
                 nickname.style.top = '-200px';
@@ -56,6 +59,8 @@ let floors = {
 
                 navRight.style.left = '59.5vw';
                 navLeft.style.right = '59vw';
+
+                paragraphListPanelContainer.style.left = '0vw';
                 break;
             case 2:
             default:
@@ -78,16 +83,27 @@ let floors = {
 }
 
 let passiveState = false;
-const elements = document.querySelectorAll('.scrollContainer');
-elements.forEach(element => {
-  element.addEventListener('mouseenter', () => {
-    passiveState = true;
-  });
-  element.addEventListener('mouseleave', () => {
-    passiveState = false;
-  });
-});
 
+const element = document.getElementById('scrollContainer');
+const element1 = document.getElementById('paragraphListPanel');
+
+element.addEventListener('mouseenter', () => selectScrollBox(element));
+element.addEventListener('mouseleave', () => unselectScrollBox(element));
+element1.addEventListener('mouseenter', () => selectScrollBox(element1));
+element1.addEventListener('mouseleave', () => unselectScrollBox(element1));
+
+function selectScrollBox(_element)
+{
+    passiveState = true;
+    _element.style.boxShadow = "0px 0px 15px #333";
+    _element.style.backgroundColor = "var(--main)";
+}
+function unselectScrollBox(_element)
+{
+    passiveState = false;
+    _element.style.boxShadow = "0px 0px 0px #333";
+    _element.style.backgroundColor = "#00000000";
+}
 
 //добавляем обработчик событий для прокрута колеса мыши для разных версий бразуеров
 if (document.addEventListener) {
@@ -125,8 +141,9 @@ function onWheel(e) {
     var delta = e.deltaY || e.detail || e.wheelDelta;
 
     //отменяем автоматическую браузерную прокрутку
-    e.preventDefault();
+    // e.preventDefault();
 
+    // if (!scrollLocked)
     if (!scrollLocked && !passiveState)
     {
         if (delta < 50)

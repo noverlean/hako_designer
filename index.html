@@ -36,10 +36,12 @@
     </div>
 
     <canvas id="canvas"></canvas>
+        
     <main id="contentContainer">
         <h2>Counter-Strike 2</h2>
         <div class="line"></div>
-        <div class="scrollContainer">
+        <div id="scrollContainer" class="scrollContainer">
+            <div class="scrollContainerTopFog"></div>
             <div class="contentContainer">
                 <h3>Введение</h3>
                 <div class="line"></div>
@@ -55,9 +57,44 @@
                 Counter-Strike 2 — это многопользовательский тактический шутер от первого лица, разработанный компанией Valve. Игра представляет собой обновление популярной Counter-Strike: Global Offensive и предлагает улучшенную графику, переработанные карты и новый движок Source 2.
                 <br><br>
                 В игре две команды — террористы и контртеррористы — соревнуются в выполнении различных задач, таких как установка или обезвреживание бомбы, а также спасение заложников. Counter-Strike 2 отличается динамичным геймплеем, реалистичными эффектами дыма и новой системой серверов, которая обеспечивает более точное и плавное взаимодействие игроков.
+            </div>
+            
+        </div>
+        <div class="scrollContainerBottomFog"></div>
+    </main>
+
+    <div id="paragraphListPanelContainer" class="paragraphListPanelContainer">
+        <div id="paragraphListPanel" class="paragraphListPanel">
+            <div class="paragraphList">
+                <ol id="ol1" onclick="CollapseSublist(1)">О игре
+                    <div class="sublist">
+                        <ul>Важность настроек</ul>
+                        <ul>Важность настроек</ul>
+                        <ul>Важность настроек</ul>
+                        <ul>Важность настроек</ul>
+                        <ul>Важность настроек</ul>
+                    </div>
+                </ol>
+                <ol id="ol2" onclick="CollapseSublist(2)">Оптимизация
+                    <div class="sublist">
+                        <ul>Введение</ul>
+                        <ul>NVIDIA</ul>
+                        <ul>Графика</ul>
+                        <ul>Система</ul>
+                        <ul>Мышь</ul>
+                    </div>
+                </ol>
+                <ol id="ol3" onclick="CollapseSublist(3)">Прицелы
+                    <div class="sublist">
+                        <ul>Основы и теория</ul>
+                        <ul>Топовые типы прицелов</ul>
+                        <ul>Прицелы ПРО-команд</ul>
+                        <ul>Прицелы стримеров</ul>
+                    </div>
+                </ol>
             </div>
         </div>
-    </main>
+    </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 

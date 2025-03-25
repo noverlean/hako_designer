@@ -36,5 +36,6 @@
     bottom: 0;
     background: linear-gradient(#00000000, var(--medium));
     transition: all .5s linear;
+    z-index: -2;
 }
 
