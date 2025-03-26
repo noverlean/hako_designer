@@ -17,6 +17,9 @@ function OnClickNavBar(id)
     console.log(id);
     lastOpenPage = id;
 
+    showHeirarchy(id-1);
+    openTopic(pageData[id-1].topics[0]);
+
     switch (id)
     {
         case 3:
