@@ -84,13 +84,13 @@ let floors = {
 
 let passiveState = false;
 
-const element = document.getElementById('scrollContainer');
-const element1 = document.getElementById('paragraphListPanel');
+const scrollContainer = document.getElementById('scrollContainer');
+const paragraphListPanel = document.getElementById('paragraphListPanel');
 
-element.addEventListener('mouseenter', () => selectScrollBox(element));
-element.addEventListener('mouseleave', () => unselectScrollBox(element));
-element1.addEventListener('mouseenter', () => selectScrollBox(element1));
-element1.addEventListener('mouseleave', () => unselectScrollBox(element1));
+scrollContainer.addEventListener('mouseenter', () => selectScrollBox(scrollContainer));
+scrollContainer.addEventListener('mouseleave', () => unselectScrollBox(scrollContainer));
+paragraphListPanel.addEventListener('mouseenter', () => selectScrollBox(paragraphListPanel));
+paragraphListPanel.addEventListener('mouseleave', () => unselectScrollBox(paragraphListPanel));
 
 function selectScrollBox(_element)
 {

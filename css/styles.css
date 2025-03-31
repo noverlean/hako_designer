@@ -47,7 +47,8 @@ h2
 h3
 {
     text-align: start;
-    margin: 35px 0vw 0px 0vw;
+    margin: 20px 0vw 0px 0vw;
+    padding-top: 15px;
     font-size: 25px;
 }
 
@@ -57,6 +58,11 @@ h3
     background-size: cover;
     margin: 15px 0px;
     border-radius: 15px;
+    background-repeat: no-repeat;
+}
+.imageOpen
+{
+    background-size: contain;
 }
 
 .line

@@ -18,7 +18,7 @@ function OnClickNavBar(id)
     lastOpenPage = id;
 
     showHeirarchy(id-1);
-    openTopic(pageData[id-1].topics[0]);
+    openTopic(0);
 
     switch (id)
     {
@@ -54,9 +54,7 @@ let listElem = [
 function CollapseSublist(id)
 {
     console.log(id);
-    console.log(lastOpened);
-
-    let rule1 = listElem[id].querySelector('.sublist').style.opacity != "0";
+    console.log(listElem[id]);
 
     if (lastOpened != 0)
     {
@@ -66,11 +64,13 @@ function CollapseSublist(id)
         {
             ulEl.style.display = "none";
         }     
-        listElem[lastOpened].classList.toggle("currentMarker");
+        
+        if (id != lastOpened)
+            listElem[lastOpened].classList.remove("currentMarker");
     }
 
-    if (id == lastOpened && rule1)
-        return;
+    // if (rule1)
+    //     return;
 
     document.getElementById("ol" + id).querySelector('.sublist').style.opacity = "1";
     document.getElementById("ol" + id).querySelector('.sublist').style.maxHeight = "100vh";
@@ -78,7 +78,7 @@ function CollapseSublist(id)
     {
         ulEl.style.display = "block";
     }
-    listElem[id].classList.toggle("currentMarker");
+    listElem[id].classList.add("currentMarker");
 
     lastOpened = id;
 }

@@ -1,3 +1,4 @@
+var currentPage = 0;
 var pageData = 
 [
     {
