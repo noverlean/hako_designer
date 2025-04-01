@@ -108,7 +108,7 @@
     align-items: center;
     justify-content: center;
     transition: all .5s ease-out;
-    
+    color: var(--main-alt);    
 }
 .paragraphListPanel
 {
@@ -118,7 +118,7 @@
     height: 30vh;
     border-radius: 25px;
     background-color: #00000000;
-    transition: all .5s linear;
+    transition: all .3s linear;
     z-index: 3;
     padding: 5px;
     cursor: default;

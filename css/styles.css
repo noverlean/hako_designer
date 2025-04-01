@@ -42,6 +42,8 @@ h2
     margin: 0px 15vw;
     width: 70vw;
     font-size: 30px;
+    color: var(--main-alt);
+    transition: all .5s linear;
 }
 
 h3
@@ -50,6 +52,8 @@ h3
     margin: 20px 0vw 0px 0vw;
     padding-top: 15px;
     font-size: 25px;
+    color: var(--main-alt);
+    transition: all .5s linear;
 }
 
 .image
@@ -59,6 +63,7 @@ h3
     margin: 15px 0px;
     border-radius: 15px;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .imageOpen
 {
@@ -71,6 +76,7 @@ h3
     width: 100%;
     background-color: var(--main-alt);
     margin: 1.5vh 0;
+    transition: all .5s linear;
 }
 
 main
@@ -83,23 +89,26 @@ main
     justify-content: start;
     width: 100vw;
     transition: all .4s ease-out;
+    color: var(--main-alt);
 }
 
 .contentContainer
 {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
+    color: var(--main-alt);
+    transition: all .5s linear;
 }
 
 .scrollContainer
 {
     width: 50vw;
-    margin: 0 20vw;
+    margin: 7vh 20vw;
     overflow: scroll;
-    height: 74vh;
+    height: 60vh;
     border-radius: 25px;
-    transition: all .5s linear;
+    transition: all .3s linear !important;
     padding: 15px;
+    color: var(--main-alt);
 }
-

@@ -97,12 +97,14 @@ function selectScrollBox(_element)
     passiveState = true;
     _element.style.boxShadow = "0px 0px 15px #333";
     _element.style.backgroundColor = "var(--main)";
+    _element.style.scale = 1.1;
 }
 function unselectScrollBox(_element)
 {
     passiveState = false;
     _element.style.boxShadow = "0px 0px 0px #333";
     _element.style.backgroundColor = "#00000000";
+    _element.style.scale = 1;
 }
 
 //добавляем обработчик событий для прокрута колеса мыши для разных версий бразуеров
