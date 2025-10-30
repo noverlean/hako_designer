@@ -24,6 +24,12 @@
 - CSS (with custom styles and animations)  
 - JavaScript  
 - GitHub Pages (planned for deployment)
+- 
+---
+
+### Photos
+![Главное меню](./screenshots/cs2.png)
+![Главное меню](./screenshots/cs2_1.png)
 
 ---
 
